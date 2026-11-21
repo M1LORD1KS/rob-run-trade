@@ -1,48 +1,299 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="ROB RUN TRADE — фанатский маркетплейс и площадка для обменов сообщества.">
-<title>ROB RUN TRADE</title><link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>ROB RUN BLACK MARKET</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="ambient"></div>
-<header class="topbar">
-  <a class="brand" href="#"><span class="logo">RR</span><span>ROB RUN <b>TRADE</b><small>PLAYER MARKETPLACE</small></span></a>
-  <nav><a href="#market">Маркетплейс</a><a href="#trades">Обмены</a><a href="#how">Как это работает</a></nav>
-  <div class="actions"><span class="online"><i></i> COMMUNITY BETA</span><button class="btn ghost" id="loginOpen">Войти</button><button class="btn primary" id="registerOpen">Создать аккаунт</button></div>
-  <button class="menu" id="menuBtn" aria-label="Меню">☰</button>
-</header>
-<main>
-<section class="hero wrap">
- <div><p class="eyebrow">THE COMMUNITY MARKETPLACE</p><h1>ТВОИ ПРЕДМЕТЫ.<br><span>ТВОИ ПРАВИЛА.</span></h1>
- <p class="lead">Находи предложения игроков, выставляй свои предметы и договаривайся об обменах в одном месте.</p>
- <div class="hero-actions"><a class="btn primary large" href="#market">Открыть маркетплейс <b>↗</b></a><a class="btn ghost large" href="#trades">Посмотреть обмены</a></div>
- <div class="trust"><span>✦ Сообщество игроков</span><span>✦ Объявления и обмены</span><span>✦ Фанатский проект</span></div></div>
- <div class="hero-card"><div class="hero-card-top"><span>MARKET OVERVIEW</span><span class="live"><i></i> DEMO</span></div><div class="orbit"><div class="orbit-core">RR</div><span class="orb o1">✦</span><span class="orb o2">◆</span><span class="orb o3">✧</span></div><div class="hero-card-bottom"><span>TRADE SMART</span><span>EST. 2026</span></div></div>
-</section>
-<section class="stats wrap"><div><b>01</b><span>ПЛОЩАДКА В РАЗРАБОТКЕ</span></div><div><b>0</b><span>ПОДТВЕРЖДЁННЫХ СДЕЛОК</span></div><div><b>∞</b><span>ВОЗМОЖНОСТЕЙ ДЛЯ ОБМЕНА</span></div></section>
-<section class="section wrap" id="market">
- <div class="section-head"><div><p class="eyebrow">FIND YOUR NEXT DEAL</p><h2>Маркетплейс</h2><p class="muted">Демонстрационные объявления — замените их реальными предложениями игроков.</p></div><button class="btn primary" id="createListing">＋ Создать объявление</button></div>
- <div class="toolbar"><label class="search">⌕ <input id="search" placeholder="Поиск предметов или игроков..."></label><select id="rarity"><option value="">Любая редкость</option><option>Обычный</option><option>Редкий</option><option>Эпический</option><option>Легендарный</option></select><select id="sort"><option value="new">Сначала новые</option><option value="low">Цена: сначала ниже</option><option value="high">Цена: сначала выше</option></select></div>
- <div class="grid" id="listings">
-  <article class="item" data-name="Neon Fang" data-rarity="Легендарный" data-price="1200"><div class="item-art purple"><span>LEGENDARY</span><strong>✦</strong><small>ITEM #001</small></div><div class="item-info"><div class="line"><span class="rarity legendary">ЛЕГЕНДАРНЫЙ</span><span class="price">1,200 <small>R$*</small></span></div><h3>Neon Fang</h3><p>Продавец: <b>@ShadowRun</b></p><button class="btn small primary trade-btn" data-item="Neon Fang">Предложить обмен</button></div></article>
-  <article class="item" data-name="Void Core" data-rarity="Эпический" data-price="850"><div class="item-art blue"><span>EPIC</span><strong>◈</strong><small>ITEM #002</small></div><div class="item-info"><div class="line"><span class="rarity epic">ЭПИЧЕСКИЙ</span><span class="price">850 <small>R$*</small></span></div><h3>Void Core</h3><p>Продавец: <b>@PixelNova</b></p><button class="btn small primary trade-btn" data-item="Void Core">Предложить обмен</button></div></article>
-  <article class="item" data-name="Solar Token" data-rarity="Редкий" data-price="420"><div class="item-art orange"><span>RARE</span><strong>☼</strong><small>ITEM #003</small></div><div class="item-info"><div class="line"><span class="rarity rare">РЕДКИЙ</span><span class="price">420 <small>R$*</small></span></div><h3>Solar Token</h3><p>Продавец: <b>@SunnyGG</b></p><button class="btn small primary trade-btn" data-item="Solar Token">Предложить обмен</button></div></article>
-  <article class="item" data-name="Frost Byte" data-rarity="Обычный" data-price="90"><div class="item-art green"><span>COMMON</span><strong>❄</strong><small>ITEM #004</small></div><div class="item-info"><div class="line"><span class="rarity common">ОБЫЧНЫЙ</span><span class="price">90 <small>R$*</small></span></div><h3>Frost Byte</h3><p>Продавец: <b>@ice_cube</b></p><button class="btn small primary trade-btn" data-item="Frost Byte">Предложить обмен</button></div></article>
- </div><p class="empty hidden" id="empty">Ничего не найдено. Измени фильтры.</p>
- <p class="fine">* Цены и предметы на этой демонстрационной странице вымышлены и не являются реальной оценкой или валютой игры.</p>
-</section>
-<section class="section alt" id="trades"><div class="wrap">
- <div class="section-head"><div><p class="eyebrow">MAKE A DEAL</p><h2>Последние предложения</h2><p class="muted">Пока это локальная демонстрация интерфейса — предложения не отправляются другим игрокам.</p></div></div>
- <div class="trade-list" id="tradeList"><div class="trade-row"><div class="avatar">S</div><div class="trade-user"><b>@ShadowRun</b><span>Предлагает обмен</span></div><div class="trade-item">Neon Fang <small>Легендарный</small></div><span class="trade-arrow">⇄</span><div class="trade-item">Рассмотрит предложения <small>Открыт к обмену</small></div><span class="pill">ОТКРЫТО</span></div>
- <div class="trade-row"><div class="avatar cyan">P</div><div class="trade-user"><b>@PixelNova</b><span>Ищет предмет</span></div><div class="trade-item">Void Core <small>Эпический</small></div><span class="trade-arrow">⇄</span><div class="trade-item">Предложения игроков <small>Обсуждение</small></div><span class="pill">ОТКРЫТО</span></div></div>
-</div></section>
-<section class="section wrap" id="how"><div class="section-head"><div><p class="eyebrow">SAFE TRADING STARTS HERE</p><h2>Как это будет работать</h2></div></div><div class="steps"><div><b>01</b><h3>Создай профиль</h3><p>Укажи игровой ник и оформи профиль сообщества.</p></div><div><b>02</b><h3>Размести объявление</h3><p>Добавь предмет, желаемую цену или то, что ищешь.</p></div><div><b>03</b><h3>Договорись об обмене</h3><p>Обсуди условия и проверяй детали перед любой сделкой.</p></div></div><div class="warning"><b>Важно о безопасности</b><p>Сайт не подключён к Roblox и не может передавать игровые предметы. Не сообщайте пароль Roblox, cookie, коды 2FA или данные аккаунта. Не отправляйте предметы незнакомцам вне защищённых механизмов самой игры.</p></div></section>
-</main>
-<footer class="wrap"><a class="brand" href="#"><span class="logo">RR</span><span>ROB RUN <b>TRADE</b><small>UNOFFICIAL COMMUNITY PROJECT</small></span></a><p>Неофициальный фанатский проект. Не связан с Roblox или разработчиками ROB RUN.</p><span>© 2026 ROB RUN TRADE</span></footer>
-<dialog id="authDialog"><button class="x" data-close>×</button><p class="eyebrow">PLAYER ACCOUNT</p><h2 id="authTitle">Войти</h2><form id="authForm"><label>Имя пользователя<input id="username" required minlength="3" maxlength="20" placeholder="Твой ник"></label><label>Пароль<input id="password" required type="password" minlength="6" placeholder="Не используй пароль Roblox"></label><button class="btn primary full" type="submit">Продолжить</button></form><p class="fine">Демо-режим: данные аккаунта хранятся только в этом браузере. Это не настоящая защищённая регистрация.</p><button class="switch" id="switchAuth">Нет аккаунта? Зарегистрироваться</button></dialog>
-<dialog id="listingDialog"><button class="x" data-close>×</button><p class="eyebrow">NEW MARKET LISTING</p><h2>Создать объявление</h2><form id="listingForm"><label>Название предмета<input id="itemName" required maxlength="40" placeholder="Название предмета"></label><label>Редкость<select id="itemRarity"><option>Обычный</option><option>Редкий</option><option>Эпический</option><option>Легендарный</option></select></label><label>Цена / желаемое предложение<input id="itemPrice" required maxlength="20" placeholder="Например: предложение обмена"></label><button class="btn primary full">Добавить в демо-маркет</button></form><p class="fine">Объявление будет видно только в этом браузере и исчезнет при очистке данных сайта.</p></dialog>
-<dialog id="tradeDialog"><button class="x" data-close>×</button><p class="eyebrow">TRADE REQUEST</p><h2>Предложить обмен</h2><p id="tradeTarget" class="muted"></p><form id="tradeForm"><label>Твой игровой ник<input id="tradeNick" required maxlength="24" placeholder="@ТвойНик"></label><label>Что предлагаешь?<textarea id="tradeOffer" required maxlength="300" placeholder="Опиши своё предложение..."></textarea></label><button class="btn primary full">Сохранить предложение в демо</button></form><p class="fine">Это не отправляет сообщение продавцу. Никакой связи с Roblox нет.</p></dialog>
-<div id="toast" role="status"></div><script src="script.js"></script>
-</body></html>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">RR</span>
+      <span>ROB RUN <b>BLACK MARKET</b></span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#market">Торговая площадка</a>
+      <a href="#trades">Обмены</a>
+      <a href="#how">Информация</a>
+    </nav>
+
+    <div class="header-actions">
+      <select id="serverSelect" class="server-select" aria-label="Игровой сервер">
+        <option value="eu">EUROPE</option>
+        <option value="east-us">EAST US</option>
+      </select>
+      <button class="btn profile-btn" id="loginOpen">Войти</button>
+      <button class="btn primary" id="registerOpen">Создать аккаунт</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">ROB RUN / PLAYER MARKETPLACE</p>
+        <h1>ТВОЙ ИНВЕНТАРЬ.<br><span>ТВОИ ПРАВИЛА.</span></h1>
+        <p class="hero-description">
+          Покупай, продавай и обменивай предметы ROB RUN.
+          Находи нужные вещи и заключай сделки с другими игроками.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#market" class="btn primary large">ОТКРЫТЬ BLACK MARKET ↗</a>
+          <a href="#trades" class="btn secondary large">МОИ ОБМЕНЫ</a>
+        </div>
+
+        <div class="hero-meta">
+          <span><i class="status-dot"></i> COMMUNITY MARKET</span>
+          <span>PLAYER TO PLAYER</span>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="hero-panel">
+          <div class="panel-top">
+            <span>MARKET ACCESS</span>
+            <span class="panel-number">01 / 03</span>
+          </div>
+          <div class="panel-symbol">RR</div>
+          <div class="panel-bottom">
+            <span>ROB RUN</span>
+            <span>BLACK MARKET</span>
+          </div>
+        </div>
+        <div class="hero-caption">YOUR ITEMS. YOUR DEALS.</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-label">ПЛОЩАДКА</span>
+        <strong>01</strong>
+        <span class="stat-note">Единый рынок предметов</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">СЕРВЕРЫ</span>
+        <strong>EU / US</strong>
+        <span class="stat-note">Выбор игрового региона</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">СДЕЛКИ</span>
+        <strong>P2P</strong>
+        <span class="stat-note">Между игроками</span>
+      </div>
+    </section>
+
+    <section class="market section" id="market">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / MARKETPLACE</p>
+          <h2>BLACK MARKET<span>.</span></h2>
+          <p class="section-description">Предметы игроков. Объявления. Обмены.</p>
+        </div>
+        <button class="btn primary" id="createListing">+ СОЗДАТЬ ОБЪЯВЛЕНИЕ</button>
+      </div>
+
+      <div class="market-toolbar">
+        <input id="search" type="search" placeholder="Поиск предмета...">
+
+        <select id="rarity" aria-label="Фильтр по редкости">
+          <option value="">Все редкости</option>
+          <option value="grey">Серая</option>
+          <option value="green">Зелёная</option>
+          <option value="purple">Фиолетовая</option>
+          <option value="yellow">Жёлтая</option>
+          <option value="red">Красная</option>
+        </select>
+
+        <select id="sort" aria-label="Сортировка">
+          <option value="new">Сначала новые</option>
+          <option value="low">Сначала дешевле</option>
+          <option value="high">Сначала дороже</option>
+        </select>
+      </div>
+
+      <div class="listings" id="listings">
+        <article class="item" data-name="Neon Fang" data-rarity="purple" data-price="250">
+          <div class="item-art purple">
+            <span>ФИОЛЕТОВАЯ</span>
+            <strong>✦</strong>
+            <small>RR / ITEM 001</small>
+          </div>
+          <div class="item-info">
+            <div class="line">
+              <span class="rarity">ФИОЛЕТОВАЯ</span>
+              <span class="price">250</span>
+            </div>
+            <h3>Neon Fang</h3>
+            <p>Демонстрационное объявление</p>
+            <button class="btn small primary trade-btn" data-item="Neon Fang">Предложить обмен</button>
+          </div>
+        </article>
+
+        <article class="item" data-name="Void Core" data-rarity="red" data-price="700">
+          <div class="item-art red">
+            <span>КРАСНАЯ</span>
+            <strong>◆</strong>
+            <small>RR / ITEM 002</small>
+          </div>
+          <div class="item-info">
+            <div class="line">
+              <span class="rarity">КРАСНАЯ</span>
+              <span class="price">700</span>
+            </div>
+            <h3>Void Core</h3>
+            <p>Демонстрационное объявление</p>
+            <button class="btn small primary trade-btn" data-item="Void Core">Предложить обмен</button>
+          </div>
+        </article>
+
+        <article class="item" data-name="Solar Token" data-rarity="yellow" data-price="120">
+          <div class="item-art yellow">
+            <span>ЖЁЛТАЯ</span>
+            <strong>◈</strong>
+            <small>RR / ITEM 003</small>
+          </div>
+          <div class="item-info">
+            <div class="line">
+              <span class="rarity">ЖЁЛТАЯ</span>
+              <span class="price">120</span>
+            </div>
+            <h3>Solar Token</h3>
+            <p>Демонстрационное объявление</p>
+            <button class="btn small primary trade-btn" data-item="Solar Token">Предложить обмен</button>
+          </div>
+        </article>
+
+        <article class="item" data-name="Frost Byte" data-rarity="green" data-price="60">
+          <div class="item-art green">
+            <span>ЗЕЛЁНАЯ</span>
+            <strong>◇</strong>
+            <small>RR / ITEM 004</small>
+          </div>
+          <div class="item-info">
+            <div class="line">
+              <span class="rarity">ЗЕЛЁНАЯ</span>
+              <span class="price">60</span>
+            </div>
+            <h3>Frost Byte</h3>
+            <p>Демонстрационное объявление</p>
+            <button class="btn small primary trade-btn" data-item="Frost Byte">Предложить обмен</button>
+          </div>
+        </article>
+      </div>
+
+      <p id="empty" class="empty hidden">Предметы не найдены.</p>
+      <p class="demo-note">Демонстрационные предметы и цены. Реальные сделки пока не подключены.</p>
+    </section>
+
+    <section class="trades section" id="trades">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / PLAYER DEALS</p>
+          <h2>ОБМЕНЫ<span>.</span></h2>
+          <p class="section-description">Создавай предложения другим игрокам.</p>
+        </div>
+      </div>
+      <div class="trade-placeholder">
+        <span class="placeholder-symbol">↔</span>
+        <h3>ТВОИ СДЕЛКИ БУДУТ ЗДЕСЬ</h3>
+        <p>Выбери предмет на площадке и предложи обмен.</p>
+        <a href="#market" class="text-link">ПЕРЕЙТИ К ПРЕДМЕТАМ ↗</a>
+      </div>
+    </section>
+
+    <section class="how section" id="how">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / HOW IT WORKS</p>
+          <h2>КАК ЭТО РАБОТАЕТ<span>.</span></h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span>01</span>
+          <h3>СОЗДАЙ ПРОФИЛЬ</h3>
+          <p>Зарегистрируй демо-профиль на площадке.</p>
+        </div>
+        <div class="step">
+          <span>02</span>
+          <h3>НАЙДИ ПРЕДМЕТ</h3>
+          <p>Используй поиск и фильтры по редкости.</p>
+        </div>
+        <div class="step">
+          <span>03</span>
+          <h3>ПРЕДЛОЖИ СДЕЛКУ</h3>
+          <p>Создай предложение обмена другому игроку.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#"><span class="brand-mark">RR</span><span>ROB RUN <b>BLACK MARKET</b></span></a>
+    <p>НЕОФИЦИАЛЬНЫЙ ФАН-ПРОЕКТ. НЕ СВЯЗАН С РАЗРАБОТЧИКАМИ ROB RUN.</p>
+  </footer>
+
+  <dialog id="authDialog" class="modal">
+    <button class="modal-close" type="button" data-close>×</button>
+    <p class="eyebrow">PLAYER ACCOUNT</p>
+    <h2 id="authTitle">Войти</h2>
+    <form id="authForm">
+      <label for="username">Имя игрока</label>
+      <input id="username" type="text" placeholder="Твой ник" minlength="3" required>
+      <label for="password">Пароль</label>
+      <input id="password" type="password" placeholder="Минимум 6 символов" minlength="6" required>
+      <button class="btn primary full" type="submit">ПРОДОЛЖИТЬ</button>
+    </form>
+    <button id="switchAuth" class="switch-auth" type="button">Нет аккаунта? Зарегистрироваться</button>
+    <p class="demo-note">Это временный демо-профиль. Не используй настоящий пароль от других сервисов.</p>
+  </dialog>
+
+  <dialog id="listingDialog" class="modal">
+    <button class="modal-close" type="button" data-close>×</button>
+    <p class="eyebrow">NEW LISTING</p>
+    <h2>НОВОЕ ОБЪЯВЛЕНИЕ</h2>
+    <form id="listingForm">
+      <label for="itemName">Название предмета</label>
+      <input id="itemName" type="text" placeholder="Название" required>
+      <label for="itemRarity">Редкость</label>
+      <select id="itemRarity" required>
+        <option value="grey">Серая</option>
+        <option value="green">Зелёная</option>
+        <option value="purple">Фиолетовая</option>
+        <option value="yellow">Жёлтая</option>
+        <option value="red">Красная</option>
+      </select>
+      <label for="itemPrice">Цена</label>
+      <input id="itemPrice" type="number" min="0" placeholder="Цена" required>
+      <button class="btn primary full" type="submit">ОПУБЛИКОВАТЬ</button>
+    </form>
+  </dialog>
+
+  <dialog id="tradeDialog" class="modal">
+    <button class="modal-close" type="button" data-close>×</button>
+    <p class="eyebrow">TRADE REQUEST</p>
+    <h2>ПРЕДЛОЖИТЬ ОБМЕН</h2>
+    <p id="tradeTarget" class="trade-target"></p>
+    <form id="tradeForm">
+      <label for="tradeNick">Ник получателя</label>
+      <input id="tradeNick" type="text" placeholder="Ник игрока" required>
+      <label for="tradeOffer">Твоё предложение</label>
+      <textarea id="tradeOffer" placeholder="Что предлагаешь взамен?" required></textarea>
+      <button class="btn primary full" type="submit">СОЗДАТЬ ПРЕДЛОЖЕНИЕ</button>
+    </form>
+    <p class="demo-note">Предложение пока сохраняется только в этом браузере.</p>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
